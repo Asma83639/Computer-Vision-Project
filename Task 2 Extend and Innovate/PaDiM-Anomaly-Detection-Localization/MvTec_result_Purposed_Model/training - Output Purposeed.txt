@@ -1,0 +1,285 @@
+(padim_env2) C:\Users\tsatt\Downloads\repo\PADIM\PaDiM-Anomaly-Detection-Localization-master>python main.py
+Running with arguments: Namespace(arch='densenet121', data_path='./datasets', save_path='./MvTec_result_Purposed_Model')
+Using device: cpu
+
+--- Processing class: bottle ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for bottle...
+Extracting train features | bottle: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:20<00:00,  2.97s/it]
+  Layer layer1 train features shape: torch.Size([209, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([209, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([209, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([209, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([209, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:08<00:00, 45.77it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_bottle.pkl
+Extracting testing features for bottle...
+Extracting test features | bottle: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:10<00:00,  3.51s/it]
+  Layer layer1 test features shape: torch.Size([83, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([83, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([83, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([83, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([83, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:05<00:00, 24.96it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 1.000
+Otsu threshold: 0.169922
+Pixel ROCAUC: 0.982
+Removing hooks...
+
+--- Processing class: cable ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for cable...
+Extracting train features | cable: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:37<00:00,  5.35s/it]
+  Layer layer1 train features shape: torch.Size([224, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([224, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([224, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([224, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([224, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:17<00:00, 40.27it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_cable.pkl
+Extracting testing features for cable...
+Extracting test features | cable: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:26<00:00,  5.33s/it]
+  Layer layer1 test features shape: torch.Size([150, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([150, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([150, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([150, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([150, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:18<00:00, 22.71it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.960
+Otsu threshold: 0.240234
+Pixel ROCAUC: 0.980
+Removing hooks...
+
+--- Processing class: capsule ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for capsule...
+Extracting train features | capsule: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:33<00:00,  4.82s/it]
+  Layer layer1 train features shape: torch.Size([219, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([219, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([219, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([219, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([219, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:03<00:00, 49.05it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_capsule.pkl
+Extracting testing features for capsule...
+Extracting test features | capsule: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:25<00:00,  5.19s/it]
+  Layer layer1 test features shape: torch.Size([132, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([132, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([132, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([132, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([132, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:15<00:00, 23.07it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.890
+Otsu threshold: 0.208984
+Pixel ROCAUC: 0.986
+Removing hooks...
+
+--- Processing class: carpet ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for carpet...
+Extracting train features | carpet: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:46<00:00,  5.15s/it]
+  Layer layer1 train features shape: torch.Size([280, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([280, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([280, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([280, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([280, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:16<00:00, 40.84it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_carpet.pkl
+Extracting testing features for carpet...
+Extracting test features | carpet: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:23<00:00,  5.94s/it]
+  Layer layer1 test features shape: torch.Size([117, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([117, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([117, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([117, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([117, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:13<00:00, 23.43it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.994
+Otsu threshold: 0.271484
+Pixel ROCAUC: 0.990
+Removing hooks...
+
+--- Processing class: grid ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for grid...
+Extracting train features | grid: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:35<00:00,  3.92s/it]
+  Layer layer1 train features shape: torch.Size([264, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([264, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([264, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([264, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([264, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:15<00:00, 41.52it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_grid.pkl
+Extracting testing features for grid...
+Extracting test features | grid: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:11<00:00,  3.84s/it]
+  Layer layer1 test features shape: torch.Size([78, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([78, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([78, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([78, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([78, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:54<00:00, 27.47it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.983
+Otsu threshold: 0.224609
+Pixel ROCAUC: 0.972
+Removing hooks...
+
+--- Processing class: hazelnut ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for hazelnut...
+Extracting train features | hazelnut: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [01:03<00:00,  4.88s/it]
+  Layer layer1 train features shape: torch.Size([391, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([391, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([391, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([391, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([391, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:18<00:00, 39.91it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_hazelnut.pkl
+Extracting testing features for hazelnut...
+Extracting test features | hazelnut: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:22<00:00,  5.60s/it]
+  Layer layer1 test features shape: torch.Size([110, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([110, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([110, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([110, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([110, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:09<00:00, 24.29it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.906
+Otsu threshold: 0.197266
+Pixel ROCAUC: 0.984
+Removing hooks...
+
+--- Processing class: leather ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for leather...
+Extracting train features | leather: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:41<00:00,  5.15s/it]
+  Layer layer1 train features shape: torch.Size([245, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([245, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([245, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([245, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([245, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:11<00:00, 44.14it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_leather.pkl
+Extracting testing features for leather...
+Extracting test features | leather: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:24<00:00,  6.18s/it]
+  Layer layer1 test features shape: torch.Size([124, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([124, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([124, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([124, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([124, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:13<00:00, 23.49it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 1.000
+Otsu threshold: 0.189453
+Pixel ROCAUC: 0.991
+Removing hooks...
+
+--- Processing class: metal_nut ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for metal_nut...
+Extracting train features | metal_nut: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:29<00:00,  4.26s/it]
+  Layer layer1 train features shape: torch.Size([220, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([220, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([220, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([220, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([220, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:08<00:00, 45.75it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_metal_nut.pkl
+Extracting testing features for metal_nut...
+Extracting test features | metal_nut: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:17<00:00,  4.35s/it]
+  Layer layer1 test features shape: torch.Size([115, 256, 56, 56])
+  Layer layer2 test features shape: torch.Size([115, 512, 28, 28])
+  Layer layer3 test features shape: torch.Size([115, 1024, 14, 14])
+  Concatenated test embedding shape: torch.Size([115, 1792, 56, 56])
+  Selected test embedding shape: torch.Size([115, 550, 56, 56])
+  Calculating Mahalanobis distances...
+Mahalanobis Calculation: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [02:13<00:00, 23.55it/s]
+  Applying Gaussian smoothing...
+Image ROCAUC: 0.998
+Otsu threshold: 0.271484
+Pixel ROCAUC: 0.976
+Removing hooks...
+
+--- Processing class: pill ---
+Registering hooks for layers: ['features.denseblock1', 'features.denseblock2', 'features.denseblock3']
+  Registering hook for: features.denseblock1
+  Registering hook for: features.denseblock2
+  Registering hook for: features.denseblock3
+C:\Users\tsatt\anaconda3\envs\padim_env2\lib\site-packages\torchvision\transforms\transforms.py:330: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  "Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. "
+Extracting training features for pill...
+Extracting train features | pill: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:40<00:00,  4.55s/it]
+  Layer layer1 train features shape: torch.Size([267, 256, 56, 56])
+  Layer layer2 train features shape: torch.Size([267, 512, 28, 28])
+  Layer layer3 train features shape: torch.Size([267, 1024, 14, 14])
+  Concatenated train embedding shape: torch.Size([267, 1792, 56, 56])
+  Selected train embedding shape: torch.Size([267, 550, 56, 56])
+  Calculating covariance matrices...
+Covariance Calculation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3136/3136 [01:20<00:00, 39.13it/s]
+  Saving features to ./MvTec_result_Purposed_Model\temp_densenet121\train_pill.pkl
+Traceback (most recent call last):
+  File "main.py", line 448, in <module>
+    main()
+  File "main.py", line 184, in main
+    pickle.dump(train_outputs_params_dict, f, protocol=pickle.HIGHEST_PROTOCOL)
+OSError: [Errno 28] No space left on device
+
+(

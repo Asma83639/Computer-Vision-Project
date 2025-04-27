@@ -1,0 +1,12 @@
+
+# Specific versions from original README or common dependencies
+torch==1.5.0
+torchvision==0.6.0
+scikit-learn
+matplotlib
+tqdm
+
+# Deduced from main.py imports
+numpy
+scipy
+scikit-image

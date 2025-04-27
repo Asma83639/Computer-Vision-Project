@@ -122,10 +122,16 @@ It is highly recommended to use separate virtual environments (e.g., Conda, venv
 ## References
 
 [Provide numbered references corresponding to citations in the text, e.g.:]
+
 [1] T. Defard, A. Setkov, A. Loesch, and R. Audigier, "PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization," [*arXiv preprint arXiv:2011.08785*, 2020](https://arxiv.org/pdf/2011.08785).
+
 [2] J. Silvestre-Blanes, et al., "AFID: a public fabric image database for defect detection," [*AUTEX Research Journal*](https://www.researchgate.net/publication/334068330_A_Public_Fabric_Database_for_Defect_Detection_Methods_and_Results), 2019.
+
 [3] G. Huang, et al., "Densely connected convolutional networks," *CVPR*, 2017.
+
 [4] N. Otsu, "A threshold selection method from gray-level histograms," *IEEE Trans. Syst., Man, Cybern.*, 1979.
+
 [5] Ultralytics YOLOv8. [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
+
 [6] Y. Zhang, et al., "ByteTrack: Multi-Object Tracking by Associating Every Detection Box," *ECCV*, 2022.
 

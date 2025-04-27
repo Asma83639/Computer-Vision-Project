@@ -12,12 +12,6 @@ This project covers the following four tasks as outlined in the course requireme
 3.  **Solve a Local Problem:** Developing a solution for real-time traffic congestion monitoring in the UAE using YOLOv8 \cite{yolo} and ByteTrack \cite{bytetrack}.
 4.  **Ensemble Learning:** Combining HOG+SVM, HOG+MLP, and a CNN model using majority voting for face mask classification \cite{facemask_dataset}.
 
-## Project Structure
-
-The repository is organized into folders corresponding to each task:
-
-.├── Task 1 Reproduce and Adapt/│   └── PaDiM-Anomaly-Detection-Localization/  # Codebase for Task 1│       ├── datasets/AITEX/                    # Organized AITEX data│       ├── AITEX_result/                      # Results for AITEX dataset│       └── main.py                            # Main script for Task 1│       └── datasets/mvtec.py                  # Dataset loader (adapted for AITEX)│       └── ... (other necessary scripts/utils)├── Task 2 Extend and Innovate/│   └── PaDiM-Anomaly-Detection-Localization/  # Codebase for Task 2 (Modified PaDiM)│       ├── datasets/MvTec/                    # MVTec AD dataset used for evaluation│       ├── MvTec_result_Purposed_Model/       # Results for Task 2│       └── main.py                            # Main script with DenseNet/Otsu mods│       └── datasets/mvtec.py                  # Dataset loader│       └── ... (other necessary scripts/utils)├── Task 3/│   └── Traffic_Congestion_Monitoring.ipynb    # Jupyter Notebook for Task 3│   └── input.mp4                              # Example input video (if included)│   └── ByteTrack/                             # Cloned ByteTrack repository│   └── ... (potentially requirements.txt for Task 3)├── Task 4/│   ├── Face_Mask_Classification.ipynb         # Jupyter Notebook for Task 4│   ├── CW_Dataset/                            # Face Mask dataset source│   ├── Face_Mask_Models/                      # Saved models (SVM, MLP, CNN) and plots│   └── ... (potentially requirements.txt for Task 4)├── Project.pdf                                # Project description PDF└── README.md                                  # This file*(Note: Actual file names and exact structure might vary slightly based on implementation details.)*
-
 ## Installation / Dependencies
 
 It is highly recommended to use separate virtual environments (e.g., Conda, venv) for each task or group of tasks due to potentially conflicting library versions.
